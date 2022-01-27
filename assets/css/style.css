@@ -1,0 +1,16 @@
+* {
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+/* Cambio de color de la fuente según el resultado */
+.victoria {
+    color: green;
+}
+
+.derrota {
+    color: red;
+}
+
+.empate {
+    color: gray;
+}
