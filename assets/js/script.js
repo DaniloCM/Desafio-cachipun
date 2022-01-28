@@ -26,8 +26,8 @@ function nuevoJuego(marcadorJugador, marcadorMaquina) {
     $("#resultado-jugada h3").html("Resultado de la ronda");
 
     // Se ponen los iconos de jugador y maquina en las elecciones
-    $("#icono-jugador").attr("class", "fas fa-user fa-5x")
-    $("#icono-maquina").attr("class", "fas fa-robot fa-5x")
+    $("#icono-jugador").attr("class", "fas fa-user fa-5x");
+    $("#icono-maquina").attr("class", "fas fa-robot fa-5x");
 
     // Se remueve de pantalla el mensaje del resultado anterior y el botón de comienzo y se imprime la pantalla de juego y las opciones de jugadas
     $("#pantalla-resultado").addClass("d-none");
@@ -49,15 +49,15 @@ function jugadaNumeroAPalabra(jugada) {
 
     switch (jugada) {
         case 0:
-            jugadaLiteral = "Piedra"
+            jugadaLiteral = "Piedra";
             break;
 
         case 1:
-            jugadaLiteral = "Papel"
+            jugadaLiteral = "Papel";
             break;
 
         case 2:
-            jugadaLiteral = "Tijera"
+            jugadaLiteral = "Tijera";
             break;
 
         default:
@@ -83,7 +83,7 @@ function imprimirElecciones(jugada, selector) {
             $(selector).attr("class", "far fa-hand-scissors fa-5x");
             break;
         default:
-            console.error("Error en jugada en la función imprimirElecciones")
+            console.error("Error en jugada en la función imprimirElecciones");
             break;
     }
 
@@ -186,7 +186,7 @@ $(function () { //Funcion Ready
         // Reinicia las variables de los marcadores y la ronda actual
         marcadorJugador = 0;
         marcadorMaquina = 0;
-        rondaActual = 0
+        rondaActual = 0;
 
         // Se obtiene el dato del número de repeticiones
         numeroRepeticiones = cantidadRepeticiones();
@@ -197,7 +197,7 @@ $(function () { //Funcion Ready
 
         // Se inicia el nuevo juego
         nuevoJuego(marcadorJugador, marcadorMaquina);
-    })
+    });
 
 
 
@@ -213,7 +213,7 @@ $(function () { //Funcion Ready
 
         // Se obtiene el resultado de la partida y se muestran las jugadas en pantalla
         resultado = resultadoJuego(jugadaJugador, marcadorJugador, marcadorMaquina);
-        $("#resultado-jugada h3").html(`Ronda ${rondaActual} - ${resultado}`)
+        $("#resultado-jugada h3").html(`Ronda ${rondaActual} - ${resultado}`);
 
         // Limpia las clases del color de la fuente del resultado de la ronda
         $("#resultado-jugada").removeClass("victoria derrota empate");
@@ -243,5 +243,5 @@ $(function () { //Funcion Ready
         }
 
 
-    })
+    });
 });
